@@ -1,0 +1,17 @@
+
+ * {font-family: 'Source Sans Pro', sans-serif !important;}
+h1, h2, h3 {font-weight: 700;}
+body { margin-bottom: 100px; font-weight: 100;}
+a {color: #68A8E0;}
+img {max-width:100%;}
+a:hover {text-decoration: none;}
+.main-content {margin-top: 40px;}
+.list-things {margin-top: 20px;}
+.list-things li {margin-bottom: 20px; }
+.list-things li p.lead {height: 30px; text-overflow:ellipsis; white-space: nowrap;width: 100%; overflow: hidden; }
+.list-things li p.text-muted {height: 17px; text-overflow:ellipsis; white-space: nowrap;width: 100%; overflow: hidden; }
+.list-things .lead {margin-bottom: 0px; font-weight: 700;}
+.header_prof_img {border-radius: 100px;margin-top: 15px; height: 100px;}
+h1.name a {color:#333;}
+.date { margin:30px 0px;}
+.photo img {width: 100%;}

@@ -1,0 +1,6 @@
+name: Jeff Huber
+markdown: redcarpet
+pygments: true
+
+permalink: /:title
+#paginate_path: 'page:num'

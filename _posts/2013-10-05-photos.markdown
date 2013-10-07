@@ -1,0 +1,7 @@
+---
+layout: photos-page
+title:  "A photo from DK"
+date:   2013-10-05 23:04:10
+image: https://scontent-b.xx.fbcdn.net/hphotos-ash3/40445_475844444504_8148832_o.jpg
+categories: photos
+---

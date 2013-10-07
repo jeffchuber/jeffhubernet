@@ -1,0 +1,190 @@
+---
+layout: project
+title:  "Weeks Left"
+date:   2013-10-05 23:04:10
+categories: project
+description: An experiment in persperctive
+---
+
+<style type="text/css">
+  .week-array { width:396px; }
+  .week { width: 6px; height: 6px; float: left; margin:0px 1px 1px 0px; }
+  .week-used { background-color: #cacaca;}
+  .week-left { background-color: green; }
+</style>
+
+<div class="container">
+  <div class="row content">
+    <div class="col-md-12">
+      <h3 class="text-center">{{page.title}}</h3>
+      <hr>
+    </div>
+    <div class="col-md-4 col-sm-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">Gender and Birth Please</div>
+        <div class="panel-body">
+          <h5>Gender</h5>
+          <select class="form-control js-gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+          <h5>Day of Birth</h5>
+          <div class="form-horizontal">
+            <input class="form-control span3 js-month" type="text" placeholder="MM" value="05">
+            <input class="form-control span3 js-day" type="text" placeholder="DD" value="10">
+            <input class="form-control span3 js-year" type="text" laceholder="YYYY" value="1985">
+          </div>
+          <small class="text-muted">*Age estimates based on US averages</small>
+        </div>
+        <div class="panel-footer">
+          <div class="btn btn-primary js-calculate">Calculate</div>
+        </div>
+      </div>
+    </div>
+    <div class="js-weeks col-md-4 col-sm-12"></div>
+    <div class="info col-md-4"></div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/js/handlebars.js"></script>
+
+
+
+{% raw %}
+<script id="weeks-template" type="text/x-handlebars-template">
+  <div class="col-md-12 col-sm-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">Results</div>
+      <div class="panel-body">
+        <table class="table">
+          <tbody>
+            <tr>
+              <td>Weeks total</td>
+              <td>{{weeks_total}}</td>
+            </tr>
+            <tr>
+              <td>Weeks left</td>
+              <td>{{weeks_left}}</td>
+            </tr>
+            <tr>
+              <td>Weeks used</td>
+              <td>{{weeks_used}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12 col-sm-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">Questions</div>
+      <div class="panel-body">
+        <ul>
+          <li>Are you doing the unconventional?</li>
+          <li>Are you making the world more like it should be?</li>
+          <li>Are you investing in people?</li>
+          <li>Are you making the most of your short time on earth?</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</script>
+
+<script id="viz-template" type="text/x-handlebars-template">
+  <div class="panel panel-default  week-array">
+    <div class="panel-heading">Weeks Visualization</div>
+    <div class="panel-body">
+      <small class="text-muted">Grey = Used</small> //
+      <small class="text-success">Green = Left</small>
+      <br>
+      {{#each weeks_used}}
+       <div class="week week-used"></div>
+      {{/each}}
+      {{#each weeks_left}}
+        <div class="week week-left"></div>
+      {{/each}}
+    </div>
+  </div>
+</script>
+{% endraw %}
+
+
+<script type="text/javascript">
+  $(document).ready(function () {
+
+    //TODO -- add parse URL string and autofill and execute form
+
+    $(".js-calculate").click(function () {
+      var month = $(".js-month").val() - 1,
+          day = $(".js-day").val(),
+          year = $(".js-year").val(),
+          gender = $(".js-gender").val();
+
+      caculateWeek(gender, month, day, year);
+    });
+
+    var populateViz = function (birth_year, lifespan, weeks_used, weeks_left) {
+
+      var years = [];
+      var weeks_used_array = [];
+      var weeks_left_array = [];
+
+      //TODO: better viz by weeks with hovers for what week it is
+      // for (var i = birth_year + 0; i <= birth_year + 76; i++) {
+      //   years[i] = i;
+      // };
+
+      weeks_used_array.length = weeks_used;
+      weeks_left_array.length = weeks_left;
+
+      var source   = $("#viz-template").html();
+      var template = Handlebars.compile(source);
+
+      var context = {years: years, weeks_used: weeks_used_array, weeks_left: weeks_left_array}
+      var html    = template(context);
+
+      $(".js-weeks").html(html);
+
+    };
+
+    var caculateWeek = function (gender, month, day, year) {
+      //TODO: add details to URL string to make it easy to share
+       if (gender == "male") {
+        lifespan = 76;
+      } else {
+        lifespan = 81;
+      }
+
+      var birth = new Date(year, month, day),
+          average_life_expectancy = 76*365,
+          total_life_weeks = lifespan*52,
+          est_death_date = new Date(),
+          oneDay = 24*60*60*1000,
+          today = new Date();
+
+      var birth_year = new Number(year)
+      var death_year = birth_year + lifespan;
+      var death_date = new Date(death_year, month, day);
+
+      var weeks_left_calc = Math.round(Math.abs((today.getTime() - death_date.getTime())/(oneDay)));
+      var weeks_left = Math.floor(weeks_left_calc/7);
+
+      var weeks_used_calc = Math.round(Math.abs((today.getTime() - birth.getTime())/(oneDay)));
+      var weeks_used = Math.floor(weeks_used_calc/7);
+
+      populateViz(birth_year, lifespan, weeks_used, weeks_left);
+
+      var source   = $("#weeks-template").html();
+      var template = Handlebars.compile(source);
+
+      var context = {weeks_total: total_life_weeks, weeks_used: weeks_used, weeks_left: weeks_left}
+      var html    = template(context);
+
+      $(".info").html(html);
+    }
+
+  });
+</script>
+
