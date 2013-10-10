@@ -4,3 +4,6 @@ pygments: true
 
 permalink: /:title
 #paginate_path: 'page:num'
+
+description: Essays, Projects and Photos by Jeff Huber
+url: http://www.jeffhuber.net
