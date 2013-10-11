@@ -19,7 +19,7 @@ title: Jeff Huber
     <div class="col-md-6 col-sm-12">
       <h3>Articles</h3>
       <ul class="list-unstyled list-things">
-        {% for post in site.categories['post']  %}
+        {% for post in site.categories['post'] %}
         <li>
           <a href="{{ post.url }}"><p class="lead">{{ post.title }} &raquo;</p></a>
           <p class="text-muted">{{ post.description }}</p>

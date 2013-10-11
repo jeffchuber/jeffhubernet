@@ -1,0 +1,37 @@
+---
+layout: post
+title:  "Tool Set"
+description: "The organization and the environment are in concert. - Kevin Kelly"
+date:   2013-10-10 23:07:10
+categories: post
+---
+
+Tools are certainly an important part of life. But how important are they and why? There are 2 extremes I see:
+
+#### 1. The person who focuses more on the tools than the actual creative output.
+
+Tools are a means to an end. Tools enable you to do something better, faster, cheaper than you could before or something new altogether. There is nothing intrinsically wrong with having a fascination with the tool itself. I do find however the most creative minds I meet don't get hung up with the means and focus on the work at hand.
+
+#### 2. The person who disdains tools.
+
+This person does not understand success.
+
+```
+Success = creative_quality * execution
+```
+
+and
+
+```
+Execution = willpower * ease_of_implementation
+```
+
+Coefficients aside, tools generally make ease of implementation easier. This is especially important because *willpower decays over time*.
+
+There is still room for the artist who likes imposing restrictions as a matter of experiment - and I totally encourage that. But in most situations, for most of us, tools matter.
+
+So how much should we focus on tools? Or how we think that a change in the coefficient changes our likelihood of success?
+
+90/10? The biggest risk I find to focusing on tool is thinking that optimizing the tools equates productivity. And one can spend a lifetime perfecting their setup - and accomplish nothing.
+
+Perhaps the mantra should be: Focus on shipping, but be mindful of tools.

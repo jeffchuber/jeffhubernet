@@ -2,7 +2,7 @@
 layout: post
 title:  "Education"
 description: If you want to change education, you have to understand the problems it solves.
-date:   2013-10-10 23:04:10
+date:   2013-10-10 23:00:10
 categories: post
 ---
 
