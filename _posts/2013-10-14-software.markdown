@@ -1,0 +1,29 @@
+---
+layout: post
+title:  "Programming is the language of execution."
+description: "If you want to place in the space of ideas - English is not enough."
+date:   2013-10-14 23:07:10
+categories: post
+---
+
+If you are reading this, English is probably your primary language. It is your language for ideas. English allows you to express yourself and learn from others, often on matters very abstracted and remote from the day-to-day material things that surround us. This is incredibly powerful. The invention of language begot the creation of culture.
+
+For more theories on the origin of language - read [Rene Girard](http://en.wikipedia.org/wiki/Ren%C3%A9_Girard).
+
+For all of human history the language of ideas has been far removed from execution. You could describe how to build a chair with language - but the process of building a chair was a manual one. It required very precise inputs and outputs that all required direct human intervention at each step in the process. The process to go from idea to reality was difficult.
+
+Even with the industrial age and mass production - the process of execution was still a manual one. You could have the idea to build a certain chair - however the time, capital, and process to build the factory was incredibly time consuming and costly.
+
+In the last 50 years however - we have seen an explosion in growth in the computer industry and the creation of software.
+
+Software marks the first time in human history where execution becomes language. The hardware, the actual implementer of code, is becoming entirely abstracted away. Before we had to take a lot of time and effort to translate the language of ideas into actually making that idea reality.  But with software - the language of ideas and the language of execution will become almost identical.
+
+At the moment - these very real things, programs, operate solely on machines that are able to run them. For example, you can still not build a chair with software. However - with the advent of 3d printing - this will change very soon.
+
+When the language of ideas was invented - it quickly become very advantageous to be able to speak it because then one was able to communicate with other humans and gain massive economic and evolutionary advantages.
+
+We are witnessing the invention of the language of execution - and I think we will see a similar gold rush happen (hint: it's happening in app stores). Being able to build software enables a human to (1) observe the world, (2) capture it's problems in the language of ideas, and (3) change it with the language of execution faster than we have ever seen before. That's so so exciting and it's only just begun.
+
+Programming is the new literacy. Software allows us to speak things into reality.
+
+If you want to place in the space of ideas - English is not enough.
