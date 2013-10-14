@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "Labels: Dangers and Benefits"
+description: ""
+date:   2013-10-14 23:07:10
+categories:
+---
+
+Post on labels
