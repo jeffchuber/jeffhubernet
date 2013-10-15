@@ -16,4 +16,4 @@ h1.name a {color:#333;}
 .date { margin:30px 0px;}
 .photo img {width: 100%;}
 .post { font-size: 1.35em; line-height: 1.6em; }
-.post p { font-family: Georgia !important; margin-bottom: 1.4em;}
+.post p { font: 17px/28px Georgia !important; margin-bottom: 1.4em;}
